@@ -12,6 +12,8 @@ export function MovieContent() {
         MovieService.list()
             .then((result) => {
                 setMovies(result)
+
+                const index = Math.floor(Math.random() * result.length)
             })
             .finally(() => setIsLoading(false))
     }, []);
